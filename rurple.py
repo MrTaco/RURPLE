@@ -1,15 +1,15 @@
 def cargar_mapa(nombre_mapa):
-	mapa = open(nombre_mapa, "r")
-	resultado = []
-	for i in mapa:
-		resultado.append(list(i.strip()))
-	mapa.close()
-	return resultado
+	listamapa = open(nombre_mapa, "r")
+	mapa = []
+	for i in listamapa:
+		mapa.append(list(i.strip()))
+	listamapa.close()
+	return mapa
 
 def cargar_instrucciones():
-	inst = open(programa1.txt, "r")
+	listainstrucciones= open(programa1.txt, "r")
 	instrucciones = []
-	for i in inst:
-		instrucciones.append(list(i))
-	programa1.close()
+	for j in listainstrucciones:
+		instrucciones.append(j.strip())
+	listainstrucciones.close()
 	return instrucciones
