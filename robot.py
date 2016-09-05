@@ -16,15 +16,15 @@ class Robot():
 		else:
 			self.x-=1
 
-	def Rotate(self):
-		if self.direccion=="^":
-			self.direccion=">"
-		elif self.direccion==">":
-			self.direccion=="v"
-		elif self.direccion=="v":
-			self.direccion=="<"
+	def dibujar(self):
+		if self.direccion=="UP":
+			return"^"
+		elif self.direccion=="RIGHT":
+			return">"
+		elif self.direccion=="DOWN":
+			return "v"
 		else:
-			self.direccion=="^"
+			self.direccion=="<"
 
 	
 
