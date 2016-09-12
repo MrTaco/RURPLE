@@ -1,5 +1,5 @@
 class Mapa(object):
-    def __init__ (self , ancho , alto):
+    def __init__ (self, ancho, alto):
         self.ancho = ancho
         self.alto = alto
         self.monedas = []
@@ -13,17 +13,16 @@ class Mapa(object):
 
     def dibujar(self):
         resultado = ""
-        resultado += ("_" * self.ancho) + "\n"
-        for i in range(self.alto):
-            for j in range(self.ancho):
-                if self.contar_monedas(j , i) > 0:
-                    resultado += str(self.contar_monedas(j, i)) 
-                elif i == self.robot.y and j == self.robot.x:
+        resultado += ("\n")
+        for j in range(self.alto):
+            for i in range(self.ancho):
+                if self.contar_monedas(i , j) > 0:
+                    resultado += str(self.contar_monedas(i, j)) 
+                elif j == self.robot.y and i == self.robot.x:
                     resultado += self.robot.dibujar()
                 else:
                     resultado += " "
-            resultado +=  "\n" 
-        resultado += ("_" * self.ancho)         
+            resultado +=  "\n"         
         return resultado            
 
     def contar_monedas(self, x, y):

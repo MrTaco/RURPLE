@@ -15,7 +15,7 @@ class Robot(object):
 		elif self.direccion == "RIGHT":
 			return ">"
 		elif self.direccion == "DOWN":
-			return "v"
+			return "V"
 		elif self.direccion == "LEFT":
 			return "<"	
 
