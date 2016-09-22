@@ -26,11 +26,11 @@ print(el_mapa.dibujar())
 for i in lista_instrucciones:
 #este ciclo ejecuta las instrucciones de lista_instrucciones
 	if i == "ROTATE":
-		objeto_robot.ROTATE()
+		el_robot.ROTATE()
 	elif i == "MOVE":
-		objeto_robot.MOVE()
+		el_robot.MOVE()
 	else:
-		objeto_robot.PICK()
+		el_robot.PICK()
 #Imprime en pantalla las fichas dek mapa
 	print("Fichas del Mapa: " , el_mapa.monedas_en_mapa())
 	print("Fichas Recogidas: " , el_robot.monedas)
